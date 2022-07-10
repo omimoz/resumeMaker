@@ -1,0 +1,25 @@
+{
+  "name": "omid-moazzami",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "homepage": "o-moazzami.com"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.9.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-elastic-carousel": "^0.11.5",
+    "react-https-redirect": "^1.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "vite": "^2.9.9"
+  }
+}
