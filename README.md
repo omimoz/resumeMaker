@@ -12,4 +12,4 @@ if you want to host your web after 4 step above do this steps</br>
 done</br>
 </br>
 </br>
-<a href="https://o-moazzami.com/" targrt="_blank">demo</a>
+<a href="https://o-moazzami.com/" target="_blank">demo</a>
