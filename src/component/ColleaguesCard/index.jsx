@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/css";
-import avatar from "../../assets/img/amin.jpg";
 import useWindowDimensions from "../Tools/dimention";
+import { Theme } from "../../customizer";
 const Card = ({ item }) => {
   const { height, width } = useWindowDimensions();
   const random = Math.random();
@@ -53,7 +53,7 @@ const Card = ({ item }) => {
             font-size: ${width > 900 ? "14px" : "12px"};
             line-height: ${width > 900 ? "20px" : "18px"};
             text-align: center;
-            color: #00004a;
+            color: ${Theme.hardText};
             margin-bottom: ${width > 900 ? "12px" : "16px"};
           `}
         >
@@ -68,7 +68,7 @@ const Card = ({ item }) => {
             line-height: 20px;
             margin-bottom: 4px;
             text-align: center;
-            color: #00004a;
+            color: ${Theme.hardText};
           `}
         >
           {item.pos}
@@ -81,7 +81,7 @@ const Card = ({ item }) => {
             font-size: 14px;
             line-height: 20px;
             text-align: center;
-            color: #00004a;
+            color: ${Theme.hardText};
           `}
         >
           {item.company}

@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import useWindowDimensions from "../../component/Tools/dimention";
+import { Theme } from "../../customizer";
 export const style = () => {
   const { height, width } = useWindowDimensions();
   const style = {
@@ -31,7 +32,7 @@ export const style = () => {
           : width < 1090
           ? 56 - (1090 - width) / 18
           : 56}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         margin-bottom: ${width > 900 ? 43 : 38}px;
       }
       .sec3Wrap {
@@ -48,7 +49,7 @@ export const style = () => {
         font-weight: 600;
         font-size: ${width > 900 ? 24 : 20}px;
         line-height: ${width > 900 ? 29 : 25}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         margin-bottom: 12px;
         position: relative;
       }
@@ -71,7 +72,7 @@ export const style = () => {
         left: ${width > 900 ? -50 : -40}px;
       }
       .sec1:after {
-        background: #d6e5fa;
+        background: ${Theme.secondary};
         top: 0px;
       }
       .sec2:after {
@@ -98,7 +99,7 @@ export const style = () => {
         font-weight: 600;
         font-size: ${width > 900 ? 20 : 16}px;
         line-height: ${width > 900 ? 25 : 20}px;
-        color: #1b6ca8;
+        color: ${Theme.blue};
       }
       .years {
         font-family: "Gilroy";
@@ -114,7 +115,7 @@ export const style = () => {
         font-weight: 400;
         font-size: ${width > 900 ? 20 : 16}px;
         line-height: ${width > 900 ? 36 : 28}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         margin-bottom: 8px;
       }
       .link {
@@ -123,9 +124,9 @@ export const style = () => {
         font-weight: 400;
         font-size: ${width > 900 ? 20 : 16}px;
         line-height: ${width > 900 ? 36 : 36}px;
-        color: #1b6ca8;
+        color: ${Theme.blue};
         margin-bottom: 8px;
-        border-bottom: 1px solid #1b6ca8;
+        border-bottom: 1px solid ${Theme.blue};
         width: fit-content;
       }
       .carrier.last {
@@ -170,7 +171,7 @@ export const style = () => {
           : width < 1090
           ? 56 - (1090 - width) / 18
           : 56}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         margin-bottom: ${width > 900 ? 43 : 38}px;
       }
       .desc {
@@ -179,7 +180,7 @@ export const style = () => {
         font-weight: 400;
         font-size: ${width > 900 ? 24 : 16}px;
         line-height: ${width > 900 ? 36 : 28}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
     `,
   };

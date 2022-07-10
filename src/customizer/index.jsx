@@ -7,6 +7,14 @@ import seida from "../assets/img/seida.png";
 import amin from "../assets/img/amin.jpg";
 import hamideh from "../assets/img/hamideh.jpg";
 import myPhoto from "../assets/img/myPhoto.png";
+export const Theme = {
+  primary:"#376db8",
+  secondary:"#d6e5fa",
+  hardText:"#00004a",
+  softText:"rgba(0, 0, 74, 0.5)",
+  blue:"#1b6ca8",
+  jobColor:"rgba(163, 189, 232, 0.25)"
+};
 export const Texts = {
   name: "Omid Moazzami",
   position: "FrontEnd",

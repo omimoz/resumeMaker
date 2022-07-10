@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
-import React, { useState, useEffect } from "react";
 import useWindowDimensions from "../../component/Tools/dimention";
+import { Theme } from "../../customizer";
 export const style = (anime) => {
   const { height, width } = useWindowDimensions();
   const style = {
@@ -18,7 +18,7 @@ export const style = (anime) => {
         font-weight: 800;
         font-size: ${width > 900 ? 48 : 28}px;
         line-height: ${width > 900 ? 56 : 33}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         text-align: center;
         margin-bottom: ${width > 900 ? 40 : 32}px;
       }
@@ -29,7 +29,7 @@ export const style = (anime) => {
         border-radius: 20px;
         min-width: 328px;
       }
-      background: #d6e5fa;
+      background: ${Theme.secondary};
       .bannerContainer {
         justify-content: center;
         display: -webkit-box;
@@ -107,7 +107,7 @@ export const style = (anime) => {
         font-weight: 500;
         font-size: 24px;
         line-height: 28px;
-        color: #376db8;
+        color: ${Theme.primary};
         padding: 18px 22px;
       }
 

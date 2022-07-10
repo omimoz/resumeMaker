@@ -4,7 +4,7 @@ import useWindowDimensions from "../../component/Tools/dimention";
 import handIcon from "../../assets/img/hand.svg";
 import emailIcon from "../../assets/img/email.svg";
 import phoneIcon from "../../assets/img/phone.svg";
-import { Texts } from "../../customizer";
+import { Texts, Theme } from "../../customizer";
 const MyFooter = () => {
   const { height, width } = useWindowDimensions();
   return (
@@ -37,7 +37,7 @@ const MyFooter = () => {
               font-weight: 800;
               font-size: ${width > 900 ? 32 : 28}px;
               line-height: ${width > 900 ? 38 : 33}px;
-              color: #00004a;
+              color: ${Theme.hardText};
               margin-bottom: 38px;
             `}
           >
@@ -68,7 +68,7 @@ const MyFooter = () => {
                 line-height: 23px;
                 color: #ffffff;
                 padding: 11px 24px 10px 23px;
-                background: #376db8;
+                background: ${Theme.primary};
                 box-shadow: 0px 2px 50px 2px rgba(0, 0, 74, 0.1);
                 border-radius: 100px;
                 cursor: pointer;
@@ -90,7 +90,7 @@ const MyFooter = () => {
               font-weight: 800;
               font-size: ${width > 900 ? 32 : 28}px;
               line-height: ${width > 900 ? 38 : 33}px;
-              color: #00004a;
+              color: ${Theme.hardText};
               margin-bottom: 38px;
             `}
           >
@@ -121,13 +121,13 @@ const MyFooter = () => {
                 font-weight: 500;
                 font-size: ${width > 900 ? 20 : 16}px;
                 line-height: ${width > 900 ? 24 : 19}px;
-                color: rgba(0, 0, 74, 0.6);
+                color: ${Theme.hardText};
               `}
             >
               Mobile:{" "}
               <strong
                 className={css`
-                  color: rgba(0, 0, 74, 1);
+                  color: ${Theme.hardText};
                 `}
               >
                 {Texts.mobile}
@@ -147,6 +147,9 @@ const MyFooter = () => {
             <div
               className={css`
                 margin-right: 10px;
+                img {
+                  fill: ${Theme.hardText} !important;
+                }
               `}
             >
               <img src={emailIcon} width="21px" />
@@ -158,13 +161,13 @@ const MyFooter = () => {
                 font-weight: 500;
                 font-size: ${width > 900 ? 20 : 16}px;
                 line-height: ${width > 900 ? 24 : 19}px;
-                color: rgba(0, 0, 74, 0.6);
+                color: ${Theme.hardText};
               `}
             >
               E-Mail:{" "}
               <strong
                 className={css`
-                  color: rgba(0, 0, 74, 1);
+                  color: ${Theme.hardText};
                 `}
               >
                 {Texts.Mail}

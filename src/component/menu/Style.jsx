@@ -1,5 +1,7 @@
 import { css } from "@emotion/css";
+import { Theme } from "../../customizer";
 import useWindowDimensions from "../Tools/dimention";
+
 export const style = (anime) => {
   const { height, width } = useWindowDimensions();
   const style = {
@@ -24,7 +26,7 @@ export const style = (anime) => {
       font-weight: 800;
       font-size: ${width > 900 ? 24 : 16}px;
       line-height: ${width > 900 ? 28 : 22}px;
-      color: #00004a;
+      color: ${Theme.hardText};
       text-align: ${width > 900 ? "left" : "right"};
       width: ${width > 900 ? "fit-content" : "-webkit-fill-available"};
     `,
@@ -40,7 +42,7 @@ export const style = (anime) => {
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
-        color: rgba(0, 0, 74, 0.5);
+        color: ${Theme.primary};
         margin: 0 16px;
       }
     `,
@@ -134,7 +136,7 @@ export const style = (anime) => {
     `,
     chat: css`
       cursor: pointer;
-      background: #376db8;
+      background: ${Theme.primary};
       box-shadow: 0px 2px 50px 2px rgba(0, 0, 74, 0.05);
       border-radius: 100px;
       padding: 8px 23px 8px 24px;
@@ -173,7 +175,7 @@ export const style = (anime) => {
           : width < 1410
           ? 145 - (1410 - width) / 6
           : 145}px;
-        color: rgba(163, 189, 232, 0.25);
+        color: ${Theme.jobColor};
       }
       div {
         text-align: justify;
@@ -228,7 +230,7 @@ export const style = (anime) => {
           : width < 1410
           ? 103 - (103 - width) / 6
           : 103}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .leftSide .sec2 {
         text-align: center;
@@ -240,7 +242,7 @@ export const style = (anime) => {
         font-weight: 600;
         font-size: ${width < 480 ? 24 : 40}px;
         line-height: ${width < 480 ? 28 : 47}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .leftSide .sec2 .secondLine {
         font-family: "Roboto";
@@ -248,7 +250,7 @@ export const style = (anime) => {
         font-weight: 600;
         font-size: ${width < 480 ? 18 : 30}px;
         line-height: ${width < 480 ? 21 : 35}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .rightSide {
         align-items: center;
@@ -291,7 +293,7 @@ export const style = (anime) => {
           : width < 1410
           ? 103 - (1410 - width) / 6
           : 103}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .rightSide .sec2 {
         text-align: center;
@@ -303,7 +305,7 @@ export const style = (anime) => {
         font-weight: 400;
         font-size: ${width < 480 ? 17 : 28}px;
         line-height: ${width < 480 ? 20 : 33}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .rightSide .sec2 .secondLine {
         font-family: "Roboto";
@@ -311,7 +313,7 @@ export const style = (anime) => {
         font-weight: 600;
         font-size: ${width < 480 ? 24 : 40}px;
         line-height: ${width < 480 ? 28 : 47}px;
-        color: #00004a;
+        color: ${Theme.hardText};
       }
       .imageWrapper {
         width: ${width < 900 ? "100%" : "330px"};
@@ -327,7 +329,7 @@ export const style = (anime) => {
       }
     `,
     mobileIcon: css`
-      background: #376db8;
+      background: ${Theme.primary};
       box-shadow: 0px 2px 50px 2px rgb(0 0 74 / 5%);
       border-radius: 100px;
       position: fixed;

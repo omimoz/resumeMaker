@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import useWindowDimensions from "../../component/Tools/dimention";
+import { Theme } from "../../customizer";
 export const style = () => {
   const { height, width } = useWindowDimensions();
   const style = {
@@ -11,7 +12,7 @@ export const style = () => {
         font-weight: 800;
         font-size: ${width > 900 ? 32 : 28}px;
         line-height: ${width > 900 ? 38 : 44}px;
-        color: #00004a;
+        color: ${Theme.hardText};
         text-align: center;
         margin-bottom: ${width > 900 ? 40 : 31}px;
       }
@@ -38,7 +39,7 @@ export const style = () => {
       }
       .rec-dot_active {
         box-shadow: none;
-        background: #00004a;
+        background: ${Theme.hardText};
         border-radius: 100px;
         width: 14px;
         height: 8px;
