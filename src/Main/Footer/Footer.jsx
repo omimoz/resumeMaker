@@ -124,10 +124,20 @@ const MyFooter = () => {
                 color: ${Theme.hardText};
               `}
             >
-              Mobile:{" "}
+              <span
+                className={css`
+                  color: ${Theme.footerSoft};
+                  font-family: "Gilroy";
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 20px;
+                `}
+              >
+                Mobile:
+              </span>{" "}
               <strong
                 className={css`
-                  color: ${Theme.hardText};
+                  color: ${Theme.footerHard};
                 `}
               >
                 {Texts.mobile}
@@ -164,10 +174,20 @@ const MyFooter = () => {
                 color: ${Theme.hardText};
               `}
             >
-              E-Mail:{" "}
+              <span
+                className={css`
+                  color: ${Theme.footerSoft};
+                  font-family: "Gilroy";
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 20px;
+                `}
+              >
+                E-Mail:
+              </span>{" "}
               <strong
                 className={css`
-                  color: ${Theme.hardText};
+                  color: ${Theme.footerHard};
                 `}
               >
                 {Texts.Mail}

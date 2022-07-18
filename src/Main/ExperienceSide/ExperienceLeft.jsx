@@ -14,7 +14,7 @@ const ExperienceLeft = () => {
               <img
                 className="image"
                 src={image}
-                height={width < 900 ? "91px" : "112px"}
+                height={width < 900 ? "92.81px" : "112px"}
               />
             </div>
           ))}

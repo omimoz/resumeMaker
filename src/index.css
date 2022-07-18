@@ -53,6 +53,8 @@
   }
   #root{
     overflow: hidden;
+    max-width: 1366px;
+    margin: 0 auto;
   }
   .hrefLink{
     color: inherit;

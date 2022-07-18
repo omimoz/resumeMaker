@@ -5,7 +5,7 @@ export const style = (anime) => {
   const { height, width } = useWindowDimensions();
   const style = {
     myProject: css`
-      padding: ${width < 900 ? "40px 16px" : width < 1280 ? "32px" : "56px"};
+      padding: ${width < 900 ? "40px 0px" : width < 1280 ? "32px" : "56px"};
       .containerImages {
         display: ${width > 900 ? "flex" : "block"};
         justify-content: center;
@@ -28,6 +28,7 @@ export const style = (anime) => {
         width: ${width > 1360 ? "461px" : width < 500 ? "328px" : "auto"};
         border-radius: 20px;
         min-width: 328px;
+        cursor: pointer;
       }
       background: ${Theme.secondary};
       .bannerContainer {
@@ -40,15 +41,17 @@ export const style = (anime) => {
         ::-webkit-scrollbar {
           display: none;
         }
+        padding: ${width < 900 ? "0 16px" : "auto"};
       }
       .bannerWrapper {
         display: table-cell;
-        padding: 12px;
       }
       .hoverWrapper {
         position: relative;
         overflow: hidden;
         border-radius: 20px;
+        margin: ${width > 900 ? "0 12px" : "auto"};
+        margin-right: ${width < 900 ? "8px" : "auto"};
       }
       .hover {
         position: absolute;
@@ -63,7 +66,7 @@ export const style = (anime) => {
           }
         }
         animation-name: up;
-        animation-duration: 0.4s;
+        animation-duration: 0.1s;
         bottom: 0px;
         width: 100%;
         text-align: right;
@@ -88,7 +91,7 @@ export const style = (anime) => {
           }
         }
         animation-name: down;
-        animation-duration: 0.4s;
+        animation-duration: 0.1s;
         bottom: -400px;
         width: 100%;
         opacity: 0%;
@@ -107,7 +110,7 @@ export const style = (anime) => {
         font-weight: 500;
         font-size: 24px;
         line-height: 28px;
-        color: ${Theme.primary};
+        color: ${Theme.myWorks};
         padding: 18px 22px;
       }
 

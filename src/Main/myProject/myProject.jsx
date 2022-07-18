@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
+import useWindowDimensions from "../../component/Tools/dimention";
 import { Images, LinksMyWorksBanner } from "../../customizer";
 import { style } from "./Styles";
 const MyProject = () => {
+  const { height, width } = useWindowDimensions();
   const refinfo = useRef();
   const [anime, setAnime] = useState();
   const [hover, setHover] = useState(false);
@@ -13,8 +15,6 @@ const MyProject = () => {
     window.addEventListener("scroll", onScroll);
     if (window.pageYOffset >= refinfo.current.offsetTop - 800) {
       setAnime(true);
-    } else {
-      setAnime(false);
     }
   }, [scrollTop]);
   const styles = style({ type: "banner", value: anime });
@@ -38,7 +38,7 @@ const MyProject = () => {
                 window.open(LinksMyWorksBanner.banner1, "_blank");
               }}
             >
-              <img src={Images.myWorks[0]} width="100%" className="image" />
+              <img src={width>900?Images.myWorksDesktop[0]:Images.myWorksMobile[0]} width="100%" className="image" />
               <div
                 className={
                   hover && hover.value === "left" ? "hover" : "onHover"
@@ -61,7 +61,7 @@ const MyProject = () => {
             }}
           >
             <div className="hoverWrapper">
-              <img src={Images.myWorks[1]} width="100%" className="image" />
+              <img src={width>900?Images.myWorksDesktop[1]:Images.myWorksMobile[1]} width="100%" className="image" />
               <div
                 className={
                   hover && hover.value === "right" ? "hover" : "onHover"

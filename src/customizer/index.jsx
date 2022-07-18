@@ -3,17 +3,22 @@ import cssIcon from "../assets/img/css.svg";
 import htmlIcon from "../assets/img/html.svg";
 import banner1 from "../assets/img/banner1.jpg";
 import banner2 from "../assets/img/banner2.jpg";
+import banner1Mobile from "../assets/img/banner1Mobile.jpg";
+import banner2Mobile from "../assets/img/banner2Mobile.jpg";
 import seida from "../assets/img/seida.png";
 import amin from "../assets/img/amin.jpg";
 import hamideh from "../assets/img/hamideh.jpg";
 import myPhoto from "../assets/img/myPhoto.png";
 export const Theme = {
-  primary:"#376db8",
-  secondary:"#d6e5fa",
-  hardText:"#00004a",
-  softText:"rgba(0, 0, 74, 0.5)",
-  blue:"#1b6ca8",
-  jobColor:"rgba(163, 189, 232, 0.25)"
+  primary: "#376db8",
+  secondary: "#d6e5fa",
+  hardText: "#00004a",
+  softText: "rgba(0, 0, 74, 0.5)",
+  blue: "#1b6ca8",
+  jobColor: "rgba(163, 189, 232, 0.25)",
+  myWorks: "rgba(55, 109, 184, 1)",
+  footerHard:"rgba(0, 0, 74, 1)",
+  footerSoft:"rgba(0, 0, 74, .6)"
 };
 export const Texts = {
   name: "Omid Moazzami",
@@ -50,7 +55,8 @@ export const Texts = {
 export const Images = {
   myPhoto: myPhoto,
   logos: [jsIcon, cssIcon, htmlIcon],
-  myWorks: [banner1, banner2],
+  myWorksDesktop:[banner1, banner2],
+  myWorksMobile:[banner1Mobile, banner2Mobile],
 };
 export const LinksMyWorksBanner = {
   banner1: "https://oddrun.ir/",

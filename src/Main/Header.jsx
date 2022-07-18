@@ -11,10 +11,10 @@ const Header = () => {
     <div
       className={css`
         background: ${Theme.secondary};
-        padding: 24px
-          ${width < 900 ? 16 : width < 1410 ? 113 - (1410 - width) / 4 : 113}px
-          0px;
-        ${width < 900 ? 16 : width < 1410 ? 113 - (1410 - width) / 4 : 113}px
+        min-height: ${width < 900 ? "auto" : "700px"};
+        padding: 24px ${width < 900 ? 16 : 101}px 0px;
+        ${width < 900 ? 16 : width < 1410 ? 113 - (1410 - width) / 4 : 113}px;
+        display: grid;
       `}
     >
       <Menu />

@@ -17,7 +17,7 @@ export const style = () => {
       }
     `,
     experienceRight: css`
-      padding: ${width > 900 ? "56px 50px" : "40px 16px"};
+      padding: ${width > 900 ? "56px 50px 0px 50px" : "40px 16px"};
       .mainTitle {
         font-family: "Roboto";
         font-style: normal;
@@ -103,6 +103,7 @@ export const style = () => {
       }
       .years {
         font-family: "Gilroy";
+        margin-left:8px;
         font-style: normal;
         font-weight: 400;
         font-size: ${width > 900 ? 20 : 16}px;

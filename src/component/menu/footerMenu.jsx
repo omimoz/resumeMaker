@@ -22,11 +22,25 @@ const FooterMenu = () => {
   return (
     <>
       <div className={styles.job}>
-        <div>
-          <span>I'm a {Texts.position}</span>
+        <div className="jobWrapper">
+          <div>
+            <div>I'm</div>
+            <div>a</div>
+            <div>{Texts.position}</div>
+          </div>
         </div>
         <div>
-          <span>D e v e l o p e r</span>
+          <div>
+            <div>D</div>
+            <div>e</div>
+            <div>v</div>
+            <div>e</div>
+            <div>l</div>
+            <div>o</div>
+            <div>p</div>
+            <div>e</div>
+            <div>r</div>
+          </div>
         </div>
       </div>
       <div ref={refinfo}>

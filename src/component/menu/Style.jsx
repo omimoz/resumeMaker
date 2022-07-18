@@ -12,7 +12,7 @@ export const style = (anime) => {
       display: ${width > 900 ? "flex" : "none"};
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
     `,
     wrapperMobile: css`
       display: ${width > 900 ? "none" : "flex"};
@@ -158,27 +158,24 @@ export const style = (anime) => {
       }
     `,
     job: css`
-      div span {
+      div div {
+        display: flex;
+        justify-content: space-between;
         font-family: "Roboto";
         font-style: normal;
         font-weight: 800;
-        padding: 0 8px;
         font-size: ${width < 900
           ? 48
           : width < 1410
           ? 180 - (1410 - width) / 6
           : 180}px;
-        line-height: ${width < 400
-          ? 20
-          : width < 900
-          ? 56
-          : width < 1410
-          ? 145 - (1410 - width) / 6
-          : 145}px;
+
+
         color: ${Theme.jobColor};
       }
       div {
-        text-align: justify;
+        max-height: 210px;
+        margin-bottom: 8px;
       }
       div span:after {
         content: "";
@@ -187,19 +184,19 @@ export const style = (anime) => {
       }
     `,
     carier: css`
+      min-height: 178px;
       display: flex;
       flex-wrap: wrap;
+      height: 100%;
       position: relative;
       justify-content: space-between;
       .leftSide {
         display: ${width < 900 ? "block" : "flex"};
         align-items: center;
         position: ${width < 900 ? "absolute" : "relative"};
-        left: ${anime && anime.type && anime.value
-          ? width < 900
-            ? 17
-            : 0
-          : -2000}px;
+        left: ${
+          anime && anime.type && anime.value ? (width < 900 ? 17 : 0) : -2000
+        }px;
         @keyframes left {
           0% {
             left: -3000px;
@@ -208,28 +205,21 @@ export const style = (anime) => {
             left: ${width < 900 ? 17 : 0}px;
           }
         }
-        animation-name: ${anime && anime.type === "Header" && anime.value
-          ? "left"
-          : "unset"};
+        animation-name: ${
+          anime && anime.type === "Header" && anime.value ? "left" : "unset"
+        };
         animation-duration: 0.8s;
-        bottom: ${width < 900 ? "unset" : "84px"};
-        top: ${width < 900 ? "0px" : "unset"};
+        top:0px;
+        height: fit-content;
         text-align: center;
       }
       .leftSide .sec1 {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 800;
-        font-size: ${width < 900
-          ? 40
-          : width < 1410
-          ? 88 - (1410 - width) / 12
-          : 88}px;
-        line-height: ${width < 900
-          ? 47
-          : width < 1410
-          ? 103 - (103 - width) / 6
-          : 103}px;
+        font-size: ${
+          width < 900 ? 40 : width < 1410 ? 88 - (1410 - width) / 12 : 88
+        }px;
         color: ${Theme.hardText};
       }
       .leftSide .sec2 {
@@ -258,14 +248,16 @@ export const style = (anime) => {
         display: ${width < 900 ? "block" : "flex"};
         align-items: center;
         position: ${width < 900 ? "absolute" : "relative"};
-        bottom: ${width < 900 ? "unset" : "84px"};
-        top: ${width < 900 ? "0px" : "unset"};
+        top:0px;
+        height: fit-content;
         text-align: center;
-        right: ${anime && anime.type === "Header" && anime.value
-          ? width < 900
-            ? 17
-            : 0
-          : -2000}px;
+        right: ${
+          anime && anime.type === "Header" && anime.value
+            ? width < 900
+              ? 17
+              : 0
+            : -2000
+        }px;
         @keyframes right {
           0% {
             right: -3000px;
@@ -274,25 +266,21 @@ export const style = (anime) => {
             right: ${width < 900 ? 17 : 0}px;
           }
         }
-        animation-name: ${anime && anime.type && anime.value
-          ? "right"
-          : "unset"};
+        animation-name: ${
+          anime && anime.type && anime.value ? "right" : "unset"
+        };
         animation-duration: 0.8s;
       }
       .rightSide .sec1 {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 800;
-        font-size: ${width < 900
-          ? 40
-          : width < 1410
-          ? 88 - (1410 - width) / 12
-          : 88}px;
-        line-height: ${width < 900
-          ? 47
-          : width < 1410
-          ? 103 - (1410 - width) / 6
-          : 103}px;
+        font-size: ${
+          width < 900 ? 40 : width < 1410 ? 88 - (1410 - width) / 12 : 88
+        }px;
+        line-height: ${
+          width < 900 ? 47 : width < 1410 ? 103 - (1410 - width) / 6 : 103
+        }px;
         color: ${Theme.hardText};
       }
       .rightSide .sec2 {
@@ -325,7 +313,7 @@ export const style = (anime) => {
         bottom: ${width < 900 ? "-4px" : "0px"};
         left: 0;
         object-fit: contain;
-        max-width: ${width < 900 ? "190px" : "-webkit-fill-available"};
+        max-width: -webkit-fill-available;
       }
     `,
     mobileIcon: css`

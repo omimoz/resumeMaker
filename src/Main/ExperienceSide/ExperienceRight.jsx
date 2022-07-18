@@ -11,7 +11,7 @@ const ExperienceRight = () => {
           <div className="positionTitle sec1">{Texts.company1.title}</div>
           <div className="carrier">
             <span className="office">{Texts.company1.name}</span>
-            <span className="years">{Texts.company1.years}</span>
+            <span className="years">.{Texts.company1.years}</span>
           </div>
           <div className="desc">{Texts.company1.desc}</div>
           <div className="linkWrap">
@@ -24,7 +24,7 @@ const ExperienceRight = () => {
           <div className="positionTitle sec2">{Texts.company2.title}</div>
           <div className="carrier">
             <span className="office">{Texts.company2.name}</span>
-            <span className="years">{Texts.company2.years}</span>
+            <span className="years">.{Texts.company2.years}</span>
           </div>
           <div className="desc">{Texts.company2.desc}</div>
           <div className="linkWrap">
@@ -39,7 +39,7 @@ const ExperienceRight = () => {
       </div>
       <div className="carrier last">
         <span className="office">{Texts.company3.name}</span>
-        <span className="years">{Texts.company3.years}</span>
+        <span className="years">.{Texts.company3.years}</span>
       </div>
       <div className="desc">{Texts.company3.desc}</div>
       <div className="linkWrap">
