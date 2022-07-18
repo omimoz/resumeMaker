@@ -30,6 +30,7 @@ export const style = () => {
       }
       .rec-item-wrapper {
         padding-bottom: 8% !important;
+        height: 100%;
       }
       .rec-dot {
         height: 8px;
