@@ -79,11 +79,16 @@ export const style = (anime) => {
         font-size: 24px;
         line-height: 28px;
         color: #ffffff;
-        padding: 20px;
         text-align: center;
         &:hover {
           background: rgba(255, 255, 255, 0.25);
         }
+      }
+      .hrefLink {
+        width: 100%;
+        display: block;
+        height: 100%;
+        padding: 20px 0;
       }
       .closeIcon {
         padding: 23px 0px 0px 20px;
@@ -170,7 +175,6 @@ export const style = (anime) => {
           ? 180 - (1410 - width) / 6
           : 180}px;
 
-
         color: ${Theme.jobColor};
       }
       div {
@@ -194,9 +198,11 @@ export const style = (anime) => {
         display: ${width < 900 ? "block" : "flex"};
         align-items: center;
         position: ${width < 900 ? "absolute" : "relative"};
-        left: ${
-          anime && anime.type && anime.value ? (width < 900 ? 17 : 0) : -2000
-        }px;
+        left: ${anime && anime.type && anime.value
+          ? width < 900
+            ? 17
+            : 0
+          : -2000}px;
         @keyframes left {
           0% {
             left: -3000px;
@@ -205,11 +211,11 @@ export const style = (anime) => {
             left: ${width < 900 ? 17 : 0}px;
           }
         }
-        animation-name: ${
-          anime && anime.type === "Header" && anime.value ? "left" : "unset"
-        };
+        animation-name: ${anime && anime.type === "Header" && anime.value
+          ? "left"
+          : "unset"};
         animation-duration: 0.8s;
-        top:0px;
+        top: 0px;
         height: fit-content;
         text-align: center;
       }
@@ -217,9 +223,11 @@ export const style = (anime) => {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 800;
-        font-size: ${
-          width < 900 ? 40 : width < 1410 ? 88 - (1410 - width) / 12 : 88
-        }px;
+        font-size: ${width < 900
+          ? 40
+          : width < 1410
+          ? 88 - (1410 - width) / 12
+          : 88}px;
         color: ${Theme.hardText};
       }
       .leftSide .sec2 {
@@ -248,16 +256,14 @@ export const style = (anime) => {
         display: ${width < 900 ? "block" : "flex"};
         align-items: center;
         position: ${width < 900 ? "absolute" : "relative"};
-        top:0px;
+        top: 0px;
         height: fit-content;
         text-align: center;
-        right: ${
-          anime && anime.type === "Header" && anime.value
-            ? width < 900
-              ? 17
-              : 0
-            : -2000
-        }px;
+        right: ${anime && anime.type === "Header" && anime.value
+          ? width < 900
+            ? 17
+            : 0
+          : -2000}px;
         @keyframes right {
           0% {
             right: -3000px;
@@ -266,21 +272,25 @@ export const style = (anime) => {
             right: ${width < 900 ? 17 : 0}px;
           }
         }
-        animation-name: ${
-          anime && anime.type && anime.value ? "right" : "unset"
-        };
+        animation-name: ${anime && anime.type && anime.value
+          ? "right"
+          : "unset"};
         animation-duration: 0.8s;
       }
       .rightSide .sec1 {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 800;
-        font-size: ${
-          width < 900 ? 40 : width < 1410 ? 88 - (1410 - width) / 12 : 88
-        }px;
-        line-height: ${
-          width < 900 ? 47 : width < 1410 ? 103 - (1410 - width) / 6 : 103
-        }px;
+        font-size: ${width < 900
+          ? 40
+          : width < 1410
+          ? 88 - (1410 - width) / 12
+          : 88}px;
+        line-height: ${width < 900
+          ? 47
+          : width < 1410
+          ? 103 - (1410 - width) / 6
+          : 103}px;
         color: ${Theme.hardText};
       }
       .rightSide .sec2 {
